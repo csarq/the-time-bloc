@@ -23,3 +23,16 @@ body {
   margin-bottom: 40px;
   background-color: white;
 }
+
+.app-header {
+  background-color: #ffb3ba;
+}
+
+h1 {
+  margin: 0 0 10px 0;
+}
+
+.tagline {
+  margin: 0;
+  font-size: 13.5px;
+}
