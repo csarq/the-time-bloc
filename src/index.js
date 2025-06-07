@@ -64,6 +64,7 @@ function updateCity(event) {
           "Do [of] MMMM[,] YYYY"
         )}</div>
       </div>
+      <a href="/" class="clock-card box">Back to preset clocks</a>
       </div>
   `;
 }

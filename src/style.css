@@ -111,14 +111,14 @@ h1 {
   font-size: 10px;
 }
 
-.app-footer a {
+a {
   text-decoration: none;
   color: #000000;
   font-weight: bold;
   transition: all 0.2s ease-in-out;
 }
 
-.app-footer a:hover {
+a:hover {
   color: #76a180;
   transition: all 0.2s ease-in-out;
 }
