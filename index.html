@@ -4,19 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="src/style.css">
   <title>The Time Bloc</title>
 </head>
 
 <body>
   <div class="app-container">
-    <header>
+    <header class="app-header box">
       <h1>The Time Bloc</h1>
       <p class="tagline">Telling time, unapologetically</p>
     </header>
 
     <!-- Selection Section -->
-    <section class="selection-box">
+    <section class="selection box">
       <label for="city-select">SELECT A CITY</label>
       <select name="city-select" id="city-select">
         <option value="">-- PICK A LOCATION --</option>
@@ -36,7 +39,7 @@
     </main>
 
     <!-- Footer -->
-    <footer>Coded by <a href="https://github.com/csarq" target="_blank">Catherine</a> | <a
+    <footer class="app-footer box">Coded by <a href="https://github.com/csarq" target="_blank">Catherine</a> | <a
         href="https://github.com/csarq/the-time-bloc" target="_blank">View Code</a> | <a
         href="https://the-time-bloc.netlify.app/" target="_blank">Live on
         Netlify</a></footer>
