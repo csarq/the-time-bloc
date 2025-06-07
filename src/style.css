@@ -71,6 +71,10 @@ h1 {
   background-color: white;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 #clock-grid {
   display: grid;
   gap: 26px;

@@ -45,13 +45,18 @@ function updateCity(event) {
   clearInterval(interval);
   const selectedOption = event.target;
   let cityTimeZone = event.target.value;
+  const clockGridElement = document.querySelector("#clock-grid");
+  clockGridElement.classList.remove("hidden");
+
   let cityName = selectedOption.selectedOptions[0].textContent;
   if (cityTimeZone === "current") {
     cityTimeZone = moment.tz.guess();
     cityName = cityTimeZone.replace("_", " ").split("/")[1];
   }
+  if (cityTimeZone === "") {
+    clockGridElement.classList.add("hidden");
+  }
 
-  const clockGridElement = document.querySelector("#clock-grid");
   clockGridElement.innerHTML = `
   <div class="clock-card box">
           <div class="city-name">
@@ -67,12 +72,14 @@ function updateCity(event) {
   `;
 
   function updateSelectedCityTime() {
-    const cityTime = moment().tz(cityTimeZone);
-    const liveTimeElement = document.querySelector("#live-time");
-    const liveDateElement = document.querySelector("#live-date");
+    if (cityTimeZone != "") {
+      const cityTime = moment().tz(cityTimeZone);
+      const liveTimeElement = document.querySelector("#live-time");
+      const liveDateElement = document.querySelector("#live-date");
 
-    liveTimeElement.innerHTML = cityTime.format("HH[:]mm[:]ss");
-    liveDateElement.innerHTML = cityTime.format("Do [of] MMMM[,] YYYY");
+      liveTimeElement.innerHTML = cityTime.format("HH[:]mm[:]ss");
+      liveDateElement.innerHTML = cityTime.format("Do [of] MMMM[,] YYYY");
+    }
   }
   updateSelectedCityTime();
   interval = setInterval(updateSelectedCityTime, 1000);
