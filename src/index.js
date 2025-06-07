@@ -51,6 +51,7 @@ function updateCity(event) {
   const cityTime = moment().tz(cityTimeZone);
   const clockGridElement = document.querySelector("#clock-grid");
   clockGridElement.innerHTML = `
+  <div class="clock-card box">
           <div class="city-name">
         ${selectedOption.selectedOptions[0].textContent}
         </div>
@@ -60,6 +61,7 @@ function updateCity(event) {
         <div class="date-display">${cityTime.format(
           "Do [of] MMMM[,] YYYY"
         )}</div>
+      </div>
       </div>
   `;
 }
