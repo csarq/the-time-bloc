@@ -9,12 +9,38 @@
 </head>
 
 <body>
-  <h1>The Time Bloc</h1>
-  <p>Telling time, unapologetically</p>
-  <footer>Coded by <a href="https://github.com/csarq" target="_blank">Catherine</a> | <a
-      href="https://github.com/csarq/the-time-bloc" target="_blank">View Code</a> | <a
-      href="https://the-time-bloc.netlify.app/" target="_blank">Live on
-      Netlify</a></footer>
+  <div class="app-container">
+    <header>
+      <h1>The Time Bloc</h1>
+      <p class="tagline">Telling time, unapologetically</p>
+    </header>
+
+    <!-- Selection Section -->
+    <section class="selection-box">
+      <label for="city-select">SELECT A CITY</label>
+      <select name="city-select" id="city-select">
+        <option value="">-- PICK A LOCATION --</option>
+      </select>
+    </section>
+
+    <!-- Clocks Display Section -->
+    <main id="clock-grid">
+      <div class="clock-card-box">
+        <div class="city-name">
+          Singapore
+        </div>
+        <div class="time-display">
+          13:30:00
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>Coded by <a href="https://github.com/csarq" target="_blank">Catherine</a> | <a
+        href="https://github.com/csarq/the-time-bloc" target="_blank">View Code</a> | <a
+        href="https://the-time-bloc.netlify.app/" target="_blank">Live on
+        Netlify</a></footer>
+  </div>
   <script src="src/index.js"></script>
 </body>
 
