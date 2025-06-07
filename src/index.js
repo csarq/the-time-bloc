@@ -43,14 +43,19 @@ function updateTime() {
 
 function updateCity(event) {
   const selectedOption = event.target;
-  const cityTimeZone = event.target.value;
+  let cityTimeZone = event.target.value;
+  let cityName = selectedOption.selectedOptions[0].textContent;
   console.log(event.target.selectedOptions[0].textContent);
+  if (cityTimeZone === "current") {
+    cityTimeZone = moment.tz.guess();
+    cityName = cityTimeZone.replace("_", " ").split("/")[1];
+  }
   const cityTime = moment().tz(cityTimeZone);
   const clockGridElement = document.querySelector("#clock-grid");
   clockGridElement.innerHTML = `
   <div class="clock-card box">
           <div class="city-name">
-        ${selectedOption.selectedOptions[0].textContent}
+        ${cityName}
         </div>
         <div class="time-display">
         ${cityTime.format("HH[:]mm[:]ss")}
@@ -62,6 +67,7 @@ function updateCity(event) {
       </div>
   `;
 }
+
 updateTime();
 setInterval(updateTime, 1000);
 
