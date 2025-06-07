@@ -101,6 +101,12 @@ h1 {
   background-color: white;
 }
 
+.date-display {
+  font-size: 0.8rem;
+  margin-top: 15px;
+  opacity: 0.8;
+}
+
 .app-footer {
   font-size: 10px;
 }
