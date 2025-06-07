@@ -41,9 +41,6 @@ function updateTime() {
   }
 }
 
-updateTime();
-setInterval(updateTime, 1000);
-
 function updateCity(event) {
   const selectedOption = event.target;
   const cityTimeZone = event.target.value;
@@ -65,5 +62,8 @@ function updateCity(event) {
       </div>
   `;
 }
+updateTime();
+setInterval(updateTime, 1000);
+
 const citiesSelectElement = document.querySelector("#city-select");
 citiesSelectElement.addEventListener("change", updateCity);
